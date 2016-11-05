@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/', function(req,res){
 	//console.log('Hello World');
-	res.send('Hello World Saravanan aha');
+	res.send('Hello World Saravanan aha How are you?');
 	//res.render('index', {title: 'Welcome', subtitle: 'How are you today Saravanan?'});
 });
 app.listen(app.get('port'), function() {
