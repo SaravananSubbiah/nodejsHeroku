@@ -34,6 +34,15 @@ app.get('/', function(req,res){
 app.get('/about', function(req,res){
 	console.log(res.render('about'));
 });
+app.get('/contact', function(req,res){
+	res.render('contact');
+});
+
+var jade = require('jade'),
+    locals = {name: "Saravanan"},
+    html   = jade.renderFile('views/emailTemplate.jade', locals);
+//console.log(html);
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 });
