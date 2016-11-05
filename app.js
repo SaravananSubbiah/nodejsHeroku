@@ -51,8 +51,8 @@ app.post('/contact/send', function(req,res){
         auth: {
             user: 'abini.sara2001@gmail.com', // Your email id
             pass: 'Micron@123' // Your password
-        },
-		tls: { rejectUnauthorized: false }
+        }//,
+		//tls: { rejectUnauthorized: false }
     }));
 	// To send mails the two settings we have made
 		//1. tls property added to the transporter constructor
