@@ -28,8 +28,11 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/', function(req,res){
 	//console.log('Hello World');
-	res.send('Hello World Saravanan aha How are you?');
-	//res.render('index', {title: 'Welcome', subtitle: 'How are you today Saravanan?'});
+	//res.send('Hello World Saravanan aha How are you?');
+	res.render('index', {title: 'Welcome', subtitle: 'How are you today Saravanan?'});
+});
+app.get('/about', function(req,res){
+	console.log(res.render('about'));
 });
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
