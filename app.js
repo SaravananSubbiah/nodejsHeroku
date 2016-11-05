@@ -49,18 +49,18 @@ app.post('/contact/send', function(req,res){
     var transporter = nodemailer.createTransport(smtpTransport({
         service: 'Gmail',
         auth: {
-           
-           
-        }//,
-		//tls: { rejectUnauthorized: false }
+            user: 'abini.tester123@gmail.com', // Your email id
+            pass: 'abini@tester!@#' // Your password           
+        },
+		tls: { rejectUnauthorized: false }
     }));
 	// To send mails the two settings we have made
 		//1. tls property added to the transporter constructor
 		//2. The gmail account setting has been changed [risky] -Access for less secure apps : Turn on.
 		//    https://www.google.com/settings/security/lesssecureapps
 	var mailOptions = {
-	    from: 'abini.sara2001@gmail.com', // sender address
-	    to: 'abini.sara2001@gmail.com', // list of receivers
+	    from: 'abini.tester123@gmail.com', // sender address
+	    to: 'abini.tester123@gmail.com', // list of receivers
 	    subject: 'Email Example through nodejs', // Subject line
 	    //text: 'text' //, // plaintext body
 	    html: html // You can choose to send an HTML body instead
